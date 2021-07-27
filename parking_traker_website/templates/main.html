@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset ="utf-8">
+        <title> Westlot Tracker </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    </head>
+
+    <body>
+    {% csrf_token %}
+        <nav id="sidenav">
+            <ul class="menu">
+                <h1>Total Spaces: 30</h1>
+                <h1>Current Count: 16</h1>
+                <h1>Available Spaces: 14</h1>
+                {% comment %} <li>Stats</li> {% endcomment %}
+            </ul>
+        </nav>
+
+        <div class = "main">
+            <img id ="parking_image" src = "{% static 'media/parking.jpeg'%}"></img>
+        </div>
+        <script src="{% static 'javascript/update_image.js' %}"></script>
+    </body>
+</html>
+
