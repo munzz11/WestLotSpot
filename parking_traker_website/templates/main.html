@@ -3,7 +3,7 @@
     
     <head>
         <meta charset ="utf-8">
-        <title> Westlot Tracker </title>
+        <title> Parking Lot Tracker </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
@@ -13,9 +13,10 @@
     {% csrf_token %}
         <nav id="sidenav">
             <ul class="menu">
-                <h1>Total Spaces: 30</h1>
-                <h1>Current Count: 16</h1>
-                <h1>Available Spaces: 14</h1>
+                
+                <h1 id = "total_count", value = "{{total}}">Total Spaces: {{total}}</h1>
+                <h1 id = "current_count", value = "{{current}}">Current Count: {{current}}</h1>
+                <h1 id = "available_count", value = "{{available}}">Available Spaces: {{available}}</h1>
                 {% comment %} <li>Stats</li> {% endcomment %}
             </ul>
         </nav>
