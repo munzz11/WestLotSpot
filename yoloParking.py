@@ -84,6 +84,9 @@ def detect(imagePath, yolo, minConfidence, threshold):
     print("[INFO] Output image saved successfully")
 
     print("[INFO] %2d cars detected" % (numCars))
+    out_file = open("Output.json", "w")
+    json.dump(numCars, out_file, "w")
+    out_file.close()
 
 def takePhoto(imagePath, yolo):
     camera = cv2.VideoCapture(gstreamer_pipeline(flip_method=0), cv2.CAP_GSTREAMER)
@@ -149,12 +152,13 @@ net = cv2.dnn.readNetFromDarknet(configPath,weightsPath)
 
 ##LOOP##
 while True:
-    i = 0
+    #Read in from video buffer to clear
     for i in range(0,10):
         ret, image = camera.read()
     
     cv2.imwrite('capture.jpg', image)
     detect(imagePath, yolo, minConfidence, threshold)
     #time.sleep(5)
+    
 
 del(camera)
