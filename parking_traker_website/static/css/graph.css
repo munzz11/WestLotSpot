@@ -1,0 +1,25 @@
+:root{
+
+}
+
+body {
+    
+    background-color: black;
+}
+
+h1{
+    display: block;
+    color: white;
+    text-align: center;
+}
+
+#graph_bounding_box{
+    display: block;
+    
+}
+#graph{
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+}

@@ -20,4 +20,5 @@ from tracker.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', main_view, name = 'main'),
+    path('graph', graph_view, name = 'graph'),
 ]

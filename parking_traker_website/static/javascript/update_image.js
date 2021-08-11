@@ -23,15 +23,15 @@ function refresh_data(current){
 }
 
 function post_request(){
-    index++;
-    if (index>9){index = 0}
+    //index++;
+    //if (index>9){index = 0}
     //refresh_data()
-    console.log(index)
+    //console.log(index)
     $.ajax({
         type: 'POST',
         dataType: 'json',
         data:{
-            'index': index,
+            //'index': index,
             csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
         }, success: function(data){
             //console.log('image is refreshed');

@@ -18,17 +18,16 @@
     
     /* navigation font styles */
     #sidenav a {
-      /* padding: 6px 8px 6px 16px; */
       text-decoration: none;
-      font-size: 18px;
-      color: #979696;
+      font-size: 25px;
+      color: lightgray;
+      margin-left: 20%;
+    }
+
+    #sidenav a:hover{
+      color: white;
     }
     
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    /* @media screen and (max-height: 450px) {
-      #sidenav {padding-top: 15px;}
-      #sidenav a {font-size: 18px;}
-    } */
   
     #sidenav h1 {
       padding: 0px 16px;
@@ -42,25 +41,8 @@
       padding:0;
     }
   
-    #sidenav li a {
-      display: block;
-      padding: 8px 16px;
-      text-decoration: none;
-    }
-    
-    /*Change the link color on hover*/ 
-    #sidenav li a:hover {
-      background-color: rgb(100, 99, 99);
-      color: white;
-    }
   
-    /* divider line*/
-    /* .line {
-      width: 100%;
-      height: 10;
-      border-bottom: 1px solid rgb(204, 204, 204);
-      position: absolute;
-    } */
+
   
   /* Style page content */
   .main {

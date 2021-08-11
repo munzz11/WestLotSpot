@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset ="utf-8">
+        <title> Parking Lot Tracker </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/graph.css' %}">
+    </head>
+
+    <body>
+    {% csrf_token %}
+        <h1>Real Time Parking Lot Data</h1>
+        <div id = "graph_bounding_box">
+            <canvas id="graph"></canvas>
+        </div>
+        <script> 
+            var count_data = {{count_data}}; 
+            var time_labels = {{time_data|safe}};
+        </script>
+        <script src="{% static 'javascript/update_graph.js' %}"></script>
+    </body>
+</html>
+

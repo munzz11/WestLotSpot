@@ -1,16 +1,19 @@
 import json
+from random import randrange
 
 def refresh_image(index):
-    url = f'/home/munzz11/WestLotSpot/Output.jpg'
-    copy(url)
+    # url = f'/home/munzz11/WestLotSpot/Output.jpg'
+    # copy(url)
+    return
 
 
-def get_count(index):
-    file = open('/home/munzz11/WestLotSpot/Output.json',)
-    data = json.load(file)
-    print(data)
-    refresh_image(index)
-    return data
+def get_count():
+    # file = open('/home/munzz11/WestLotSpot/Output.json',)
+    # data = json.load(file)
+    # print(data)
+    # refresh_image(index)
+    # return data
+    return randrange(11)
 
 def copy(img_url):
     
