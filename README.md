@@ -12,18 +12,19 @@ This project was built and tested on a jetson nano however it can be run on any 
 The first and most complicated part of this setup is installing DNN and the Yolo framework. More info on this including example projects as well as installation instructions for all the dependencies can be found at: https://github.com/AlexeyAB/darknet
 
 
-Next you'll need to download the WestLotSpot repo to your local user home, once installed some minor tweaks will need to be made to the code in order to locate the appropriate reference files, the structure of the current files refenced in our script is:
-
+Next you'll need to download the WestLotSpot repo in your local home/user, once installed some minor tweaks will need to be made to the code in order to locate the appropriate reference files, the structure of the current files refenced in our script is:
+<pre>
 |-📁home
-    |-📁darknet (darkent install folder containing reference files plus all other dnn related work)
-    |  |-📁weights
-    |  |  |-coco.weights
-    |  |-📁cfg
-    |  |  |-yolov3.cfg
-    |  |-darknet.py
-    |-📁WestLotSpot (this repo)
-    |  |-yoloParking.py
-     
+    |-📁user
+        |-📁darknet (darkent install folder containing reference files plus all other dnn related work)
+        |  |-📁weights
+        |  |  |-coco.weights
+        |  |-📁cfg
+        |  |  |-yolov3.cfg
+        |  |-darknet.py
+        |-📁WestLotSpot (this repo)
+        |  |-yoloParking.py
+ </pre>    
 If you look in yoloParking.py you’ll see the references we’re talking about: 
 ```
 imagePath = "/home/munzz11/WestLotSpot/capture.jpg" #Path to image
@@ -37,7 +38,7 @@ sudo python yoloParking.py
 ```
 Next start the webpage, in another terminal run:
 ```
-cd parking_traker_website
+cd /home/<user>/WestLotSpot/parking_traker_website/
 python3 manage.py runserver
 ```
 
