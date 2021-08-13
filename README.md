@@ -42,5 +42,7 @@ cd /home/<user>/WestLotSpot/parking_traker_website/
 python3 manage.py runserver
 ```
 
-You should now be able to access the website through on localhost:8000
+You should now be able to access the website on localhost:8000
+
+Getting the website and object detection running is the major hurtles, once running the oinly backend access is through the standard django localhost:8000/admin page, which you cna create a user for through the django terminal.
 
