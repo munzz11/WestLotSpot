@@ -45,4 +45,4 @@ python3 manage.py runserver
 You should now be able to access the website on localhost:8000
 
 Getting the website and object detection running is the major hurtles, once running the oinly backend access is through the standard django localhost:8000/admin page, which you cna create a user for through the django terminal.
-
+![image](https://user-images.githubusercontent.com/45202950/129286055-f07c8a14-61dd-4d80-b431-35f67db74763.png)
